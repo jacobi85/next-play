@@ -6,17 +6,6 @@ import styled, { ThemeProvider } from 'styled-components';
 import GlobalStyle from '../theme/globalStyle';
 import theme from 'styled-theming';
 
-const size = theme('size', {
-  normal: {
-    margin: 40,
-    padding: 40
-  },
-  compact: {
-    margin: 10,
-    padding: 10
-  }
-});
-
 const backgroundColor = theme('mode', {
   light: '#fff',
   dark: '#222'
@@ -52,6 +41,10 @@ const AppWrapper = styled.div`
   }
 `;
 
+const AppSection = styled.section`
+  padding: 0 20px;
+`;
+
 const customTheme = { mode: 'light' };
 
 const Layout = props => (
@@ -60,7 +53,7 @@ const Layout = props => (
     <ThemeProvider theme={customTheme}>
       <AppWrapper>
         <Header />
-        {props.children}
+        <AppSection>{props.children}</AppSection>
         <Footer />
       </AppWrapper>
     </ThemeProvider>

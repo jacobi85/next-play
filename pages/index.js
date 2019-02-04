@@ -24,7 +24,7 @@ Title.defaultProps = {
 
 export default () => (
   <Layout>
-    <Title theme="dark">Adventure playground test</Title>
+    <Title>Adventure playground test</Title>
     <ul>
       <PostLink id="hello-nextjs" title="Hello Next.js"/>
       <PostLink id="learn-nextjs" title="Learn Next.js is awesome"/>
